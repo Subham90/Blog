@@ -31,9 +31,7 @@ export default function SinglePost() {
         data: { username: user.username },
       });
       window.location.replace("/");
-    } catch (err) {
-      console.log(err.data);
-    }
+    } catch (err) {}
   };
 
   const handleUpdate = async () => {

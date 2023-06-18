@@ -1,7 +1,7 @@
-import "./topbar.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+import "./topbar.css";
 
 export default function TopBar() {
 const { user,dispatch } = useContext(Context);
@@ -24,8 +24,8 @@ const handleLogout = () =>{
         <li className="TopListitem">
           <Link className="link" to="/">HOME</Link>
           </li>
-        <li className="TopListitem"><Link className="link" to="/">ABOUT</Link></li>
-        <li className="TopListitem"><Link className="link" to="/">CONTACT</Link></li>
+        <li className="TopListitem"><Link className="link" to="/about">ABOUT</Link></li>
+        <li className="TopListitem"><Link className="link" to="/contact">CONTACT</Link></li>
         <li className="TopListitem"><Link className="link" to="/write">WRITE</Link></li>
         <li className="TopListitem" onClick={handleLogout} >
           {user && "LOGOUT"}

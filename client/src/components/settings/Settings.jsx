@@ -86,8 +86,8 @@ export default function Settings() {
             Update
           </button>
           {success && (
-            <span className="updatemessage"
-              style={{textAlign: "center", marginTop: "20px" }}
+            <span
+              style={{ color: "green", textAlign: "center", marginTop: "20px" }}
             >
               Profile has been updated...
             </span>

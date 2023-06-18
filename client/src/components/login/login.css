@@ -1,65 +1,60 @@
-.login
-{
+.login {
     height: calc(100vh - 50px);
-    display:flex;
-    align-items: center;
-    flex-direction:column;
-    justify-content: center;
-    background: linear-gradient(rgba(255,255,255,0.5),
-    rgba(255,255,255,0.5)),url("https://images.unsplash.com/photo-1529539795054-3c162aab037a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
-    background-size:cover;
-}
-.loginTitle
-{
-    font-size:50px;
-}
-.loginform
-{
     display: flex;
     flex-direction: column;
-    margin-top:20px;
-    width:250px;
-
-}
-.loginform > label{
-margin: 10px 0;
-}
-.loginInput
-{
-    padding: 10px;
-    background-color:white;
-    border:none;
-}
-.loginbutton
-{
-    margin-top: 20px;
-    background-color: royalblue;
-    color:white;
-    font-weight: bold;
-    border-radius: 20px;
-    border: none;
-    width:200px;
-    height: 30px;
     align-items: center;
-   justify-content: center;
-   margin-left:25px;
-}
-.loginbutton:disabled{
+    justify-content: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-size: cover;
+  }
+  
+  .loginTitle {
+    font-size: 50px;
+  }
+  
+  .loginForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .loginForm > label {
+    margin: 10px 0;
+  }
+  
+  .loginInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+  }
+  
+  .loginButton {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: lightcoral;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .loginButton:disabled{
     cursor: not-allowed;
-    background-color: coral;
-}
-.Registerbutton
-{
-    /* position:absolute;
-    top:80px;
-    right:20px; */
-    background-color: rgb(6, 154, 154);
-    margin-top: 30px;
-    cursor:pointer;
-    border:none;
-    color:white;
-    padding:10px;
-    border-radius:10px;
-    font-weight: bold;
-
-}
+    background-color: rgb(252, 173, 173);
+  }
+  
+  .loginRegisterButton {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: teal;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+  }

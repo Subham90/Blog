@@ -17,7 +17,7 @@ export default function Login() {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });
-      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.status });
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
     }
@@ -25,20 +25,30 @@ export default function Login() {
 
   return (
     <div className="login">
-        <span className="loginTitle">Login</span>
-      <form className="loginform" onSubmit={handleSubmit}>
+      <span className="loginTitle">Login</span>
+      <form className="loginForm" onSubmit={handleSubmit}>
         <label>Username</label>
-        <input type="text" className="loginInput" placeholder="Enter your Username"
-        ref={userRef}
+        <input
+          type="text"
+          className="loginInput"
+          placeholder="Enter your username..."
+          ref={userRef}
         />
         <label>Password</label>
-        <input type="password" className="loginInput" placeholder="Enter your password"
-        ref={passwordRef}
+        <input
+          type="password"
+          className="loginInput"
+          placeholder="Enter your password..."
+          ref={passwordRef}
         />
-        <button className="loginbutton" type="submit" disabled={isFetching}>Login</button>
+        <button className="loginButton" type="submit" disabled={isFetching}>
+          Login
+        </button>
       </form>
-      <button className="Registerbutton">
-      <Link className="link" to="/register">Register</Link>
+      <button className="loginRegisterButton">
+        <Link className="link" to="/register">
+          Register
+        </Link>
       </button>
     </div>
   );

@@ -8,7 +8,7 @@ export default function Header() {
         <span className="headerTitlesLg">Blogs</span>
       </div>
       <img className="Headerimage"
-      src="https://c4.wallpaperflare.com/wallpaper/77/198/331/if-they-are-just-forgotten-memories-toy-metal-car-life-documentary-close-up-0817-daily-boutique-white-and-yellow-bus-die-cast-scale-model-wallpaper-preview.jpg" alt=""></img>
+      src="https://images.unsplash.com/photo-1511649475669-e288648b2339?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="" />
     </div>
-  )
+  );
 }
