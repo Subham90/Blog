@@ -22,21 +22,6 @@ mongoose
   })
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
-  
-app.use((req, res, next)=>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, auth-token, Referer, User-Agent, Accept');
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Preflight', true)
-
-  if (req.method === "OPTIONS") {
-      return res.status(200).end();
-  }
-  
-  next();
-})
-
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
