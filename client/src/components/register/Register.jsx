@@ -20,7 +20,7 @@ export default function Register() {
       });
       if(res.data)
       {
-       window.location="/login";
+       window.location.replace={"/login"};
       }
       else{
         console.log("Something went wrong");
