@@ -33,8 +33,8 @@ export default function Write() {
       }
      }
      try{
-      // const res = await axios.post("https://blog-backend-ho92.onrender.com/api/posts", newPost);
-      window.location.replace("https://blog-backend-ho92.onrender.com/api/posts");
+      const res = await axios.post("https://blog-backend-ho92.onrender.com/api/posts", newPost);
+      window.location.replace("https://blog-frontend-n684.onrender.com/");
      }catch(err){}
   };
 
