@@ -18,7 +18,13 @@ export default function Register() {
         email,
         password,
       });
-      res.data && window.location.replace("/login");
+      if(res.data)
+      {
+       window.location="/login";
+      }
+      else{
+        console.log("Something went wrong");
+      }
     } catch (err) {
       setError(true);
     }
