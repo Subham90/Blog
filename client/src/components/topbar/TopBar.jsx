@@ -35,7 +35,8 @@ const handleLogout = () =>{
     <div className="topRight">
       {user ? (
         <Link to="/settings">
-      <img className="topImg" src={PF+user.profilePic} alt=""></img>
+      {/* <img className="topImg" src={PF+user.profilePic} alt=""></img> */}
+      <i className="fa-lg fa-solid fa-user"></i>
       </Link>
       ) : (
           <ul className="topList">
