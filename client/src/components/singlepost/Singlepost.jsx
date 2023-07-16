@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
+import { useNavigate } from "react-router-dom";
 import "./singlepost.css";
 
 export default function SinglePost() {
@@ -12,12 +13,13 @@ export default function SinglePost() {
   const PF = "https://blog-backend-ho92.onrender.com/images/";
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
+  const navigate = useNavigate();
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("https://blog-backend-ho92.onrender.com/api/posts/" + path);
+      const res = await axios.get(`${process.env.REACT_APP_HOST_URL}/api/posts/` + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -27,16 +29,16 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://blog-backend-ho92.onrender.com/api/posts/${post._id}`, {
+      await axios.delete(`${process.env.REACT_APP_HOST_URL}/api/posts/${post._id}`, {
         data: { username: user.username },
       });
-      window.location.replace("/");
+      navigate("/");
     } catch (err) {}
   };
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`https://blog-backend-ho92.onrender.com/api/posts/${post._id}`, {
+      await axios.put(`${process.env.REACT_APP_HOST_URL}/api/posts/${post._id}`, {
         username: user.username,
         title,
         desc,
