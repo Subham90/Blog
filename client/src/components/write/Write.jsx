@@ -34,7 +34,7 @@ export default function Write() {
      }
      try{
       const res = await axios.post("https://blog-backend-ho92.onrender.com/api/posts", newPost);
-      window.location="/post/"+res.data._id;
+      window.locatio.replace={"/post/"+res.data._id};
      }catch(err){}
   };
   return (

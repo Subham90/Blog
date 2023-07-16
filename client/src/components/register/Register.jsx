@@ -22,7 +22,11 @@ export default function Register() {
       });
       if(res.data)
       {
+<<<<<<< HEAD
         navigate("/login");
+=======
+       window.location.replace={"/login"};
+>>>>>>> 4959bab9892c85b09926e0d6ad7660ca0e7252cb
       }
       else{
         console.log("Something went wrong");
